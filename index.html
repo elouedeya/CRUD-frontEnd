@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire centré avec Bootstrap</title>
+  
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+   
+    .centered-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    body{
+      background-color: rgb(2, 2, 20);
+    }
+    .text-white{
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row centered-form">
+      <h1 class="text-white">CRUD Operations With Node.js API</h1>
+      <div class="col-md-6">
+        <div class="card bg-transparent border border-white">
+          <div class="card-body">
+            <h3 class="card-title text-center text-white">Formulaire</h3>
+            <div class="form-group">
+              <label for="productName" class="text-white">Product name</label>
+              <input type="text" class="form-control" id="productName"/>
+            </div>
+            <div class="form-group">
+              <label for="ProductPrice" class="text-white">Product price</label>
+              <input type="text" class="form-control" id="ProductPrice"/>
+            </div>
+            <div class="form-group">
+              <label class="text-white">Product description</label>
+              <textarea class="form-control" id="productDescription"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary text-white bg-transparent border-white" onclick="addOrUpdateProduct()">Add product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h2 class="text-white">Liste des produits</h2>
+    <table class="table text-white">
+      <thead>
+        <tr>
+          <th scope="col">index</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Description</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody id="productList"></tbody>
+    </table>
+  </div>
+
+
+  <script>
+   
+  </script>
+</body>
+</html>
